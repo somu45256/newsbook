@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled notebook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+        <div class="logo">
+            <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="white"/>
+            </svg>
+            <span class="app-title">Untitled notebook</span>
+        </div>
+        <div class="nav-actions">
+            <button class="nav-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                    <path d="M3 8a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8z"/>
+                    <path d="M5 7V5a3 3 0 1 1 6 0v2H5z"/>
+                </svg>
+                Share
+            </button>
+            <button class="nav-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                    <circle cx="8" cy="3" r="1.5"/>
+                    <circle cx="8" cy="8" r="1.5"/>
+                    <circle cx="8" cy="13" r="1.5"/>
+                </svg>
+                Settings
+            </button>
+            <button class="nav-btn icon-only">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                    <rect x="2" y="2" width="4" height="4"/>
+                    <rect x="10" y="2" width="4" height="4"/>
+                    <rect x="2" y="10" width="4" height="4"/>
+                    <rect x="10" y="10" width="4" height="4"/>
+                </svg>
+            </button>
+            <div class="profile-icon">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M12 14c-6 0-8 3-8 6h16c0-3-2-6-8-6z'/%3E%3C/svg%3E" alt="Profile">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-container">
+        <!-- Left Panel: Sources -->
+        <section class="panel sources-panel">
+            <div class="panel-header">
+                <h2>Sources</h2>
+                <button class="icon-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                        <rect x="2" y="2" width="5" height="12"/>
+                        <rect x="9" y="2" width="5" height="12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="panel-content">
+                <div class="button-group">
+                    <button class="primary-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                            <path d="M8 2v12M2 8h12" stroke="white" stroke-width="2"/>
+                        </svg>
+                        Add
+                    </button>
+                    <button class="secondary-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                            <circle cx="6" cy="6" r="4" stroke="white" stroke-width="2" fill="none"/>
+                            <path d="M9 9l4 4" stroke="white" stroke-width="2"/>
+                        </svg>
+                        Discover
+                    </button>
+                </div>
+                <button class="add-source-btn">Add source</button>
+                <div class="empty-state">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="12" y="8" width="24" height="32" stroke="#6b7280" stroke-width="2" fill="none"/>
+                        <line x1="16" y1="16" x2="32" y2="16" stroke="#6b7280" stroke-width="2"/>
+                        <line x1="16" y1="22" x2="28" y2="22" stroke="#6b7280" stroke-width="2"/>
+                    </svg>
+                    <p class="empty-title">Saved sources will appear here</p>
+                    <p class="empty-description">Click Add source above to add PDFs, websites, text, videos, or audio files. Or import a file directly from Google Drive.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Middle Panel: Chat -->
+        <section class="panel chat-panel">
+            <div class="panel-header">
+                <h2>Chat</h2>
+                <button class="icon-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                        <line x1="2" y1="4" x2="14" y2="4" stroke="white" stroke-width="2"/>
+                        <line x1="2" y1="8" x2="14" y2="8" stroke="white" stroke-width="2"/>
+                        <line x1="2" y1="12" x2="14" y2="12" stroke="white" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="panel-content chat-content">
+                <div class="chat-empty-state">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                        <path d="M32 8L38 20L52 22L42 32L44 46L32 40L20 46L22 32L12 22L26 20L32 8Z" fill="#4f46e5"/>
+                    </svg>
+                    <h3>Add a source to get started</h3>
+                    <button class="upload-btn">Upload a source</button>
+                </div>
+                <div class="chat-footer">
+                    <div class="chat-input-container">
+                        <input type="text" placeholder="Upload a source to get started" disabled>
+                        <span class="source-count">0 sources</span>
+                        <button class="send-btn" disabled>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="white">
+                                <circle cx="10" cy="10" r="8" fill="white"/>
+                                <path d="M10 6l4 4-4 4" stroke="#1f2937" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel: Studio -->
+        <section class="panel studio-panel">
+            <div class="panel-header">
+                <h2>Studio</h2>
+                <button class="icon-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                        <rect x="2" y="2" width="5" height="12"/>
+                        <rect x="9" y="2" width="5" height="12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="panel-content studio-content">
+                <div class="studio-banner">
+                    <p>Create an Audio Overview in: <span class="lang-tags">हिन्दी, বাংলা, ગુજરાતી, ಕನ್ನಡ, தமிழ், മലയാളം, తెలుగు, मराठी</span></p>
+                </div>
+                <div class="studio-grid">
+                    <div class="studio-card">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="10" width="4" height="12" fill="#9ca3af"/>
+                            <rect x="10" y="6" width="4" height="20" fill="#9ca3af"/>
+                            <rect x="16" y="8" width="4" height="16" fill="#9ca3af"/>
+                            <rect x="22" y="12" width="4" height="8" fill="#9ca3af"/>
+                        </svg>
+                        <span>Audio Overview</span>
+                    </div>
+                    <div class="studio-card">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="6" y="6" width="20" height="14" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                            <path d="M12 16l4-3 4 3" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span>Video Overview</span>
+                    </div>
+                    <div class="studio-card">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="10" r="3" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                            <circle cx="8" cy="22" r="3" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                            <circle cx="24" cy="22" r="3" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                            <line x1="16" y1="13" x2="10" y2="19" stroke="#9ca3af" stroke-width="2"/>
+                            <line x1="16" y1="13" x2="22" y2="19" stroke="#9ca3af" stroke-width="2"/>
+                        </svg>
+                        <span>Mind Map</span>
+                    </div>
+                    <div class="studio-card">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="8" y="6" width="16" height="20" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                            <line x1="12" y1="12" x2="20" y2="12" stroke="#9ca3af" stroke-width="2"/>
+                            <line x1="12" y1="16" x2="20" y2="16" stroke="#9ca3af" stroke-width="2"/>
+                        </svg>
+                        <span>Reports</span>
+                    </div>
+                    <div class="studio-card">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="6" y="8" width="10" height="14" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                            <rect x="16" y="8" width="10" height="14" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span>Flashcards</span>
+                    </div>
+                    <div class="studio-card">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="8" y="8" width="16" height="16" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                            <line x1="8" y1="14" x2="24" y2="14" stroke="#9ca3af" stroke-width="2"/>
+                            <line x1="14" y1="8" x2="14" y2="24" stroke="#9ca3af" stroke-width="2"/>
+                        </svg>
+                        <span>Quiz</span>
+                    </div>
+                </div>
+                <div class="studio-footer">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 12L28 20L38 22L31 29L33 39L24 34L15 39L17 29L10 22L20 20L24 12Z" stroke="#6b7280" stroke-width="2" fill="none"/>
+                    </svg>
+                    <p class="footer-title">Studio output will be saved here.</p>
+                    <p class="footer-description">After adding sources, click to add Audio Overview, Study Guide, Mind Map, and more!</p>
+                    <button class="add-note-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="4" y="4" width="8" height="10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <line x1="6" y1="7" x2="10" y2="7" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        Add note
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bottom-note">
+        <p>NotebookLM can be inaccurate, please double check its responses.</p>
+    </footer>
+</body>
+</html>
